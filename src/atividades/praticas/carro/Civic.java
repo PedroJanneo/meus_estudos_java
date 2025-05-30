@@ -1,4 +1,4 @@
-package atividades.praticas.atividadeCarro;
+package atividades.praticas.carro;
 
 public class Civic implements Carro{
     @Override
