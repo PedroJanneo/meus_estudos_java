@@ -1,6 +1,4 @@
-package atividades.praticas.calculadora;
-
-import POO.Projects.Entities.Calculator;
+/*package atividades.praticas.calculadora;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -54,3 +52,4 @@ public class Main {
             sc.close();
     }
 }
+*/
