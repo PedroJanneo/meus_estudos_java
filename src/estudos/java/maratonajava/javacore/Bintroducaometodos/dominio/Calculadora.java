@@ -1,0 +1,58 @@
+package estudos.java.maratonajava.javacore.Bintroducaometodos.dominio;
+
+/**
+ * void -> sem retorno <br>
+ * <tipo_da_funcao -> com retorno
+ *<br>
+ *  saida é diferente der retorno
+ *
+ *  saida -> imprimir console <br>
+ *  retorno -> retornar algo.
+ */
+public class Calculadora {
+
+
+    public void somarNumeros(){
+        System.out.println(10+11);
+    }
+
+    public void subtrairNumeros(){
+        System.out.println(18-9);
+    }
+
+    public void multiplicarNumeros(int num1,int num2){
+        System.out.println(num1*num2);
+    }
+
+    public double dividirNumeros(double num1, double num2){
+        return num1/num2;
+    }
+
+    public double dividirNumeros02(double num1, double num2){
+        if (num2 != 0){
+            return num1/num2;
+        } else{
+            return  0;
+        }
+
+    }
+
+    public  void  dividirNumeros03(double num1, double num2 ){
+        if(num2 == 0){
+            System.out.println("Impossivel dividir por 0");
+            return; //funciona igual o break do for/switch
+        }
+        System.out.println(num1/num2);
+    }
+
+    public void alterarDoisNumeros(int num1, int num2){
+         num1 = 10;
+         num2 = 100;
+
+        System.out.println("Dentro da função ");
+        System.out.println("n1 " +num1);
+        System.out.println("n2 " +num2);
+    }
+
+
+}
