@@ -1,4 +1,4 @@
-package tarefa;
+package atividades.praticas.tarefa;
 
 public class TarefaEstudo extends Tarefa {
 

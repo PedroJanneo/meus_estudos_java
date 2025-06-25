@@ -1,4 +1,4 @@
-package tarefa;
+package atividades.praticas.tarefa;
 
 public abstract class Tarefa {
     String nome;
