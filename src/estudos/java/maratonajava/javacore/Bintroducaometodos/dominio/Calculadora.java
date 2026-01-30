@@ -12,8 +12,9 @@ package estudos.java.maratonajava.javacore.Bintroducaometodos.dominio;
 public class Calculadora {
 
 
-    public void somarNumeros(){
-        System.out.println(10+11);
+    public static int somarNumeros(int a, int b){
+        System.out.println("Iniciando a função da soma: ");
+        return a + b;
     }
 
     public void subtrairNumeros(){
@@ -74,5 +75,12 @@ public class Calculadora {
         }
         System.out.println(soma);
     }
+
+
+
+    // Desafio 1:  criar uma calc que valida se um nmero é primo ou não
+    // ewrornar true se for e false se nao for
+    // Desaio 2: riar uma calc que recebe uma lista/array
+    // retorme esta lista x2
 
 }
