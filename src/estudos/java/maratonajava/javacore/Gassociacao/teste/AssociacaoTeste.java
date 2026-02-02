@@ -7,11 +7,15 @@ import estudos.java.maratonajava.javacore.Gassociacao.domain.Seminario;
 
 public class AssociacaoTeste {
     public static void main(String[] args) {
-        Local local = new Local("Taboao");
+        Local local = new Local("SP");
         Aluno aluno = new Aluno("Pedro",21);
+        Aluno aluno2 = new Aluno("Zoro",21);
         Professor professor = new Professor("Barba branca", "Pirata");
-        Aluno[] alunosParaSeminario = {aluno};
-        Seminario seminario = new Seminario("Os 'codadores'",alunosParaSeminario,local);
+        // Professor professor = new Professor(); // construtor vazio, usado para tratar erro
+        //Aluno[] alunosParaSeminario = {aluno, aluno2};
+        Aluno[] alunosParaSeminario = {};
+        Seminario seminario = new Seminario("Os 'codadores'",alunosParaSeminario, local);
+        //Seminario seminario = new Seminario("Os 'codadores'",alunosParaSeminario); // cosntrutor sem ´local' paraa testes de erro
 
 
         Seminario[] seminariosDisponiveis = {seminario};

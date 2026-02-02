@@ -8,6 +8,9 @@ public class Professor {
     private String especialidade;
     private Seminario[] seminarios;
 
+    public Professor() {
+    }
+
     public Professor(String nome, String especialidade, Seminario[] seminarios) {
         this.nome = nome;
         this.especialidade = especialidade;
@@ -22,20 +25,44 @@ public class Professor {
         this.nome = nome;
     }
 
-    public void imprimi(){
-        System.out.println("--------------");
-        System.out.println("Professor: " + this.nome);
-        if(this.seminarios==null) return  ;
-        System.out.println("Seminarios: ");
-        for( Seminario seminarios : this.seminarios){
+    public void imprimi() {
+        System.out.println("------Seminario: -------");
+        if (this.nome == null && this.especialidade == null) {
+            System.out.println("Professor: sem professor cadastrado no seminario ");
+        } else {
+            System.out.println("Nome: : " + this.nome);
+            System.out.println("Especialidade: " + this.especialidade);
+        }
+        if (this.seminarios == null) return;
+        System.out.print("Seminarios: ");
+
+        for (Seminario seminarios : this.seminarios) {
             System.out.println(seminarios.getTitulo());
-            System.out.println("Local: " + seminarios.getLocal().getEndereco());
-            if( seminarios.getAlunos() == null || seminarios.getAlunos().length == 0) continue;
-            System.out.println("----------------");
-            System.out.println("---Alunos---");
-            for(Aluno aluno : seminarios.getAlunos()){
-                System.out.println("Aluno " + aluno.getNome());
-                System.out.println("Idade " + aluno.getIdade());
+            int alunosSeminarios = 0;
+            for (int i = 0; i < seminarios.getAlunos().length; i++) {
+                alunosSeminarios++;
+            }
+            System.out.println("Quantidade de alunos neste seminario: " + alunosSeminarios);
+            if (seminarios.getLocal() == null) {
+                System.out.println("Local: Sem local definido ");
+            } else {
+                System.out.println("Local: " + seminarios.getLocal().getEndereco());
+            }
+            if (seminarios.getAlunos() == null || seminarios.getAlunos().length == 0) {
+                System.out.println("----------------");
+                System.out.println("---Alunos---");
+                System.out.println("Nenhum aluno cadastrado ");
+                ;
+            } else {
+                System.out.println("----------------");
+                System.out.println("---Alunos---");
+
+
+                for (Aluno aluno : seminarios.getAlunos()) {
+
+                    System.out.println("Aluno " + aluno.getNome());
+                    System.out.println("Idade " + aluno.getIdade());
+                }
             }
         }
     }
