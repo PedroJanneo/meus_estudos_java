@@ -6,8 +6,17 @@ public class Pessoa {
     private Endereco endereco;
 
     public void imprimir(){
-        System.out.println("Nome: " + this.nome);
-        System.out.println("CPF: " + this.cpf);
+        if (this.nome == null){
+            System.out.println("Sem registro de nome ");
+        } else {
+            System.out.println("Nome: " + this.nome);
+        }
+        if (this.cpf == null) {
+            System.out.println("Cadastro sem CPF ");
+        } else{
+            System.out.println("CPF: " + this.cpf);
+        }
+        if(endereco.getCep() == null && endereco.getRua() == null ) return;;
         System.out.println("Endereco: " + endereco.getCep() + " " + endereco.getRua());
 
 
