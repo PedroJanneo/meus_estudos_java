@@ -1,9 +1,15 @@
 package estudos.java.maratonajava.javacore.Hheranca.dominio;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    protected String nome; // mudando as variaveis para 'protected' pois assim, sua classe filha ( Funcionario) podera usar as variaveis livremente em sua propria classe
+    protected String cpf;           // lembrando q por estar como protected, todos na mesma 'pasta' (pacote) tem acesso livremente a ela.
+    protected Endereco endereco;
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+
 
     public void imprimir(){
         if (this.nome == null){
